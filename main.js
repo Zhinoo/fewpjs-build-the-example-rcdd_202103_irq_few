@@ -5,7 +5,20 @@ const FULL_HEART = '♥'
 // Your JavaScript code goes here!
 
 
+const main = document.querySelector('body')
+main.addEventListener('click', function (event) {
+  let likeButtonIsPressed = event.target.className === "like-glyph"
 
+  if (likeButtonIsPressed) {
+    //let id = event.target.parentElement.dataset.id
+    console.log(event.target)
+     let like = event.target
+     if (like.innerText == EMPTY_HEART) {
+      like.innerText = FULL_HEART
+    }
+    else {
+      like.innerText = EMPTY_HEART
+    }
 
 //------------------------------------------------------------------------------
 // Don't change the code below: this function mocks the server response
